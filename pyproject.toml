@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "molmetrics"
+version = "0.0.1"
+description = "Molecular Generation Metrics"
+authors = [{ name = "Silong Zhai", email = "zhaisilong@outlook.com" }]
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+keywords = ["molecular generation", "metrics"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent"
+]
+
+dependencies = [
+  "click",
+  "tqdm",
+  "pandas",
+  "numpy<2",
+  "loguru",
+  "ipykernel",
+  "rdkit",
+]
+
+[project.urls]
+Homepage = "https://github.com/zhaisilong/MolMetrics"
+
+[project.scripts]
+molmetrics = "molmetrics.cli:main"
+
+[tool.setuptools]
+packages = ["molmetrics"]
